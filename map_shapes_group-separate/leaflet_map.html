@@ -12,7 +12,7 @@ LEAFLET HAS A CSS STYLESHEET THAT YOU NEED
 THE NEXT IS THE JAVASCRIPT LIBRARY FOR LEAFLET
 AND THE FINAL ONE IS THE LIBRARY FOR JQUERY, WHICH I USE FOR THE PULLDOWN MENU.
  -->
-	<title>Judicial nomination 'Nays' vote map by circuit</title>
+	<title>Judicial nomination 'Nays' votes map by circuit</title>
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,7 +69,7 @@ THE MAP SHOULD BE EMPTY.
 WHATEVER INTRODUCTORY TEXT YOU WANT CAN GO INTO THE ARTICLEPLACE DIV
  -->
 <div id='map'></div>
-<div id='articlePlace'>This map shows average percentages of 'Nays' vote at the Senate when confirming judge nominations.</div>
+<div id='articlePlace'>This map shows average votes of 'Nays' for each circuit when confirming judge nominations at the Senate.</div>
 
 <!-- 
 THIS IS WHERE THE BROWSER LOADS IN YOUR GEOJSON INFORMATION
@@ -121,7 +121,7 @@ var info = L.control();
 	info.update = function (props) {
 		this._div.innerHTML = '<h4>HEADLINE WINDOW</h4>' +  (props ?
 			'<b>' + props.name + '</b><br />' + props.headline
-			: 'Hover over a state');
+			: 'Hover over a circuit');
 	};
 
 	info.addTo(map);
